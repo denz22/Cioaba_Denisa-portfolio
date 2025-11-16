@@ -1,0 +1,426 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- BASE VARIABLES ---------- */
+body {
+    height: 100vh;
+
+    --bg-top: #A4AC86;
+    --bg-bottom: #A68A64;
+
+    --theme-bar-bg: #C2C5AA;
+
+    --popup-bg: #B6AD90;
+    --popup-header-bg: #333D29;
+    --popup-header-text: #C2C5AA;
+    --popup-text: #582F0E;
+
+    --top-button-bg: var(--bg-top);
+    --bottom-button-bg: var(--bg-bottom);
+
+    background: linear-gradient(
+        to bottom,
+        var(--bg-top) 0%,
+        var(--bg-top) 75%,
+        var(--bg-bottom) 75%,
+        var(--bg-bottom) 100%
+    );
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* ---------- TOP ICONS ---------- */
+.top-icons {
+    position: absolute;
+    top: 30vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8vw;
+}
+
+#Cv_button,
+#Proiecte_button,
+#Q_A_button {
+    width: 18vw;
+    height: 18vw;
+    max-width: 280px;
+    max-height: 280px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--top-button-bg);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+#Cv_button:hover,
+#Proiecte_button:hover,
+#Q_A_button:hover {
+    transform: translateY(-10px) scale(1.03);
+    filter: brightness(1.15);
+}
+
+/* ---------- BOTTOM ICONS ---------- */
+.bottom-icons {
+    position: absolute;
+    bottom: 4vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6vw;
+}
+
+#Email_button,
+#Linkedin_button,
+#Git_button,
+#Other_button {
+    width: 8vw;
+    height: 8vw;
+    max-width: 140px;
+    max-height: 140px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--bottom-button-bg);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+#Email_button:hover,
+#Linkedin_button:hover,
+#Git_button:hover,
+#Other_button:hover {
+    transform: translateY(-7px) scale(1.05);
+    filter: brightness(1.15);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    #Cv_button,
+    #Proiecte_button,
+    #Q_A_button {
+        width: 30vw;
+        height: 30vw;
+    }
+
+    #Email_button,
+    #Linkedin_button,
+    #Git_button,
+    #Other_button {
+        width: 14vw;
+        height: 14vw;
+    }
+
+    .top-icons {
+        gap: 12vw;
+    }
+
+    .bottom-icons {
+        gap: 10vw;
+    }
+}
+
+/* ---------- POPUPS ---------- */
+.popup {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(95vw, 640px);
+
+  background: var(--popup-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  display: none;
+  z-index: 10;
+
+  will-change: transform;
+}
+
+.popup-body {
+  padding: 16px 20px;
+  color: var(--popup-text);
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.popup-header {
+  padding: 8px 12px;
+  background: var(--popup-header-bg);
+  color: var(--popup-header-text);
+  font-weight: 600;
+  border-radius: 12px 12px 0 0;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  cursor: pointer;
+}
+
+/* ---------- CV POPUP CONTENT ---------- */
+.cv-popup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.cv-tagline {
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+.cv-summary {
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.cv-section-title {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.cv-list {
+  list-style: disc;
+  padding-left: 1.1rem;
+  margin: 0;
+}
+
+.cv-list li {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  margin-bottom: 0.25rem;
+}
+
+.cv-experience li strong {
+  font-size: 0.84rem;
+}
+
+/* ---------- Q&A / OTHER POPUPS ---------- */
+.qa-popup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.qa-item {
+  border-radius: 10px;
+  background: rgba(255,255,255,0.12);
+  overflow: hidden;
+}
+
+.qa-question {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--popup-text);
+  cursor: pointer;
+}
+
+.qa-item.open .qa-question {
+  text-decoration: underline;
+}
+
+.qa-answer {
+  display: none;
+  padding: 0 0.8rem 0.7rem 0.8rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.qa-item.open .qa-answer {
+  display: block;
+}
+
+/* ---------- FORM + COLOR PICKER ---------- */
+form.color-picker {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 22px;
+}
+
+.visually-hidden {
+    margin: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    border: 0;
+    padding: 0;
+}
+
+.color-picker > fieldset {
+    border: 0;
+    display: flex;
+    gap: 2rem;
+    width: fit-content;
+    background-color: var(--theme-bar-bg, #fff6cc);
+    padding: 0.8rem 2.5rem;
+    border-radius: 999px;
+}
+
+.color-picker input[type="radio"] {
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    outline: 3px solid var(--radio-color, currentColor);
+    border-radius: 50%;
+    outline-offset: 3px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.color-picker input[type="radio"]:checked {
+    background-color: var(--radio-color);
+}
+
+/* radio colors */
+.color-picker input[type="radio"]#Blue   { --radio-color: #013a63; }
+.color-picker input[type="radio"]#Pink   { --radio-color: #f72585; } /* roz nou */
+.color-picker input[type="radio"]#Yellow { --radio-color: #ffd400; }
+.color-picker input[type="radio"]#Black  { --radio-color: #212529; }
+.color-picker input[type="radio"]#Green  { --radio-color: #333d29; }
+
+/* ---------- THEMES ---------- */
+
+/* GREEN – default */
+body.theme-green {
+    --bg-top: #A4AC86;
+    --bg-bottom: #A68A64;
+
+    --theme-bar-bg: #C2C5AA;
+
+    --popup-bg: #B6AD90;
+    --popup-header-bg: #333D29;
+    --popup-header-text: #C2C5AA;
+    --popup-text: #582F0E;
+
+    --top-button-bg: var(--bg-top);
+    --bottom-button-bg: var(--bg-bottom);
+}
+
+body.theme-green #Cv_button       { background-image: url('1.green.Cv.png'); }
+body.theme-green #Proiecte_button { background-image: url('2.green.Proiecte.png'); }
+body.theme-green #Q_A_button      { background-image: url('3.green.Q&A.png'); }
+body.theme-green #Git_button      { background-image: url('4.green.linkedin.png'); }
+body.theme-green #Linkedin_button { background-image: url('5.green.GitHub.png'); }
+body.theme-green #Email_button    { background-image: url('6.green.Email.png'); }
+body.theme-green #Other_button    { background-image: url('7.green.other.png'); }
+
+/* BLUE */
+body.theme-blue {
+    --bg-top: #89c2d9;
+    --bg-bottom: #013a63;
+
+    --theme-bar-bg: #A9D6E5;
+
+    --popup-bg: #A9D6E5;
+    --popup-header-bg: #012a4a;
+    --popup-header-text: #A9D6E5;
+    --popup-text: #012a4a;
+
+    --top-button-bg: var(--bg-top);
+    --bottom-button-bg: var(--bg-bottom);
+}
+
+body.theme-blue #Cv_button       { background-image: url('1.Blue.Cv.png'); }
+body.theme-blue #Proiecte_button { background-image: url('2.Blue.Proiecte.png'); }
+body.theme-blue #Q_A_button      { background-image: url('3.Blue.Q&A.png'); }
+body.theme-blue #Git_button      { background-image: url('4.Blue.GitHub.png'); }
+body.theme-blue #Linkedin_button { background-image: url('5.Blue.linkedin.png'); }
+body.theme-blue #Email_button    { background-image: url('6.Blue.Email.png'); }
+body.theme-blue #Other_button    { background-image: url('7.Blue.other.png'); }
+
+/* PINK */
+body.theme-pink {
+    --bg-top: #ffccd5;
+    --bg-bottom: #590d22;
+
+    --theme-bar-bg: #FFB3C1;
+
+    --popup-bg: #FFCCD5;
+    --popup-header-bg: #800F2F;
+    --popup-header-text: #FFF0F3;
+    --popup-text: #590D22;
+
+    --top-button-bg: var(--bg-top);
+    --bottom-button-bg: var(--bg-bottom);
+}
+
+body.theme-pink #Cv_button       { background-image: url('1.Pink.Cv.png'); }
+body.theme-pink #Proiecte_button { background-image: url('2.Pink.Proiecte.png'); }
+body.theme-pink #Q_A_button      { background-image: url('3.Pink.Q&A.png'); }
+body.theme-pink #Git_button      { background-image: url('4.Pink.GitHub.png'); }
+body.theme-pink #Linkedin_button { background-image: url('5.Pink.linkedin.png'); }
+body.theme-pink #Email_button    { background-image: url('6.Pink.Email.png'); }
+body.theme-pink #Other_button    { background-image: url('7.Pink.other.png'); }
+
+/* YELLOW */
+body.theme-yellow {
+    --bg-top: #fff6cc;
+    --bg-bottom: #a2d6f9;
+
+    --theme-bar-bg: #FFF6CC;
+
+    --popup-bg: #FFF2B2;
+    --popup-header-bg: #FFE14C;
+    --popup-header-text: #000000;
+    --popup-text: #000000;
+
+    --top-button-bg: var(--bg-top);
+    --bottom-button-bg: var(--bg-bottom);
+}
+
+body.theme-yellow #Cv_button       { background-image: url('1.Yellow.Cv.png'); }
+body.theme-yellow #Proiecte_button { background-image: url('2.Yellow.Proiecte.png'); }
+body.theme-yellow #Q_A_button      { background-image: url('3.Yellow.Q&A.png'); }
+body.theme-yellow #Git_button      { background-image: url('4.Yellow.GitHub.png'); }
+body.theme-yellow #Linkedin_button { background-image: url('5.Yellow.linkedin.png'); }
+body.theme-yellow #Email_button    { background-image: url('6.Yellow.Email.png'); }
+body.theme-yellow #Other_button    { background-image: url('7.Yellow.other.png'); }
+
+/* BLACK */
+body.theme-black {
+    --bg-top: #adb5bd;
+    --bg-bottom: #212529;
+
+    --theme-bar-bg: #CED4DA;
+
+    --popup-bg: #CED4DA;
+    --popup-header-bg: #495057;
+    --popup-header-text: #F8F9FA;
+    --popup-text: #212529;
+
+    --top-button-bg: var(--bg-top);
+    --bottom-button-bg: var(--bg-bottom);
+}
+
+body.theme-black #Cv_button       { background-image: url('1.Black.Cv.png'); }
+body.theme-black #Proiecte_button { background-image: url('2.Black.Proiecte.png'); }
+body.theme-black #Q_A_button      { background-image: url('3.Black.Q&A.png'); }
+body.theme-black #Git_button      { background-image: url('4.Black.GitHub.png'); }
+body.theme-black #Linkedin_button { background-image: url('5.Black.linkedin.png'); }
+body.theme-black #Email_button    { background-image: url('6.blue.Email (2).png'); }
+body.theme-black #Other_button    { background-image: url('7.Black.other.png'); }
