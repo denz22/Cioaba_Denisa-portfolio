@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cioaba_Denisa_portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- THEME SELECTOR -->
+    <form action="" class="color-picker">
+      <fieldset>
+        <legend class="visually-hidden">Theme</legend>
+
+        <label>
+          <input type="radio" name="theme" id="Blue" value="blue">
+          <span class="visually-hidden">Blue</span>
+        </label>
+
+        <label>
+          <input type="radio" name="theme" id="Pink" value="pink">
+          <span class="visually-hidden">Pink</span>
+        </label>
+
+        <label>
+          <input type="radio" name="theme" id="Yellow" value="yellow">
+          <span class="visually-hidden">Yellow</span>
+        </label>
+
+        <label>
+          <input type="radio" name="theme" id="Black" value="black">
+          <span class="visually-hidden">Black</span>
+        </label>
+
+        <label>
+          <input type="radio" name="theme" id="Green" value="green" checked>
+          <span class="visually-hidden">Green</span>
+        </label>
+      </fieldset>
+    </form>
+
+    <!-- TOP ICONS -->
+    <div class="top-icons">
+        <button id="Cv_button"></button>
+        <button id="Proiecte_button"></button>
+        <button id="Q_A_button"></button>
+    </div>
+
+    <!-- BOTTOM ICONS (CONTACT BAR) -->
+    <div class="bottom-icons">
+        <button id="Email_button"></button>
+        <button id="Linkedin_button"></button>
+        <button id="Git_button"></button>
+        <button id="Other_button"></button>
+    </div>
+
+    <!-- POP-UP CV -->
+    <div id="Cv_popup" class="popup">
+      <div id="Cv_popup_header" class="popup-header">
+        CV – Cioaba Ana-Maria
+        <span id="Cv_close" class="close-btn">✕</span>
+      </div>
+
+      <div class="popup-body cv-popup">
+        <p class="cv-tagline">
+          Configuration Management · Project Coordination · Data & Process Optimization
+        </p>
+
+        <p class="cv-summary">
+          I’m a structured, curious and detail-oriented professional with experience in configuration
+          management, project planning and data organization. I enjoy work that combines accurate
+          documentation, clear communication and logical thinking, and I often use my growing Java &
+          Python skills to break down problems into small, manageable steps.
+        </p>
+
+        <h3 class="cv-section-title">Profile</h3>
+        <p class="cv-summary">
+          I work best in environments where I can bring order to complex information: keeping versions
+          aligned, tracking changes, checking quality and supporting teams with clear, up-to-date data.
+          I learn fast when I’m curious about a topic, and I’m not afraid to make mistakes, fix them and
+          refine the process.
+        </p>
+
+        <h3 class="cv-section-title">Key strengths</h3>
+        <ul class="cv-list">
+          <li>Maintain alignment between documents, configurations and versions across teams and tools.</li>
+          <li>Organize configuration data, track changes and ensure traceability (Jira, CRM, OneQ, SAP, SuperOpL).</li>
+          <li>Build and maintain tracking files and Excel structures to reduce manual work and improve reporting.</li>
+          <li>Identify gaps or inconsistencies in processes and suggest practical, easy-to-apply improvements.</li>
+          <li>Communicate calmly and clearly with colleagues from different backgrounds and locations.</li>
+        </ul>
+
+        <h3 class="cv-section-title">Recent experience</h3>
+        <ul class="cv-list cv-experience">
+          <li>
+            <strong>Configuration Management – Bosch, Cluj (2023–present)</strong><br>
+            Support automotive projects by coordinating configuration data, checking document quality and
+            keeping version history consistent. Work with international teams, prepare and update internal
+            documentation, and test new internal tools and flows before they go live.
+          </li>
+          <li>
+            <strong>Math & Romanian Tutor – Freelancer (2020–present)</strong><br>
+            Design individual learning plans for students, explain concepts step-by-step and adapt the
+            teaching style to different learning needs (including dyslexia and ADHD). Create worksheets,
+            exercises and visual explanations to make difficult topics easier to understand.
+          </li>
+          <li>
+            <strong>Project Planner – AIESEC (2023–2024)</strong><br>
+            Help plan and deliver local and international events, coordinate tasks and deadlines, follow
+            up with volunteers and partners, and support communication between different teams involved
+            in each project.
+          </li>
+        </ul>
+
+        <h3 class="cv-section-title">Tools & skills</h3>
+        <p class="cv-summary">
+          SAP · Jira · CRM systems · OneQ · SuperOpL · Excel (formulas & basic macros) ·
+          Project planning & task tracking · Quality & documentation checks ·
+          Basic Java & Python · HTML/CSS (beginner–intermediate).
+        </p>
+      </div>
+    </div>
+
+    <!-- POP-UP PROJECTS -->
+    <div id="Proiecte_popup" class="popup">
+      <div id="Proiecte_popup_header" class="popup-header">
+        Projects
+        <span id="Proiecte_close" class="close-btn">✕</span>
+      </div>
+      <div class="popup-body">
+        <p>Here you can showcase Arduino experiments, small web projects, coursework or personal mini-tools.</p>
+      </div>
+    </div>
+
+    <!-- POP-UP Q&A -->
+    <div id="Q_A_popup" class="popup">
+      <div id="Q_A_popup_header" class="popup-header">
+        Q &amp; A
+        <span id="Q_A_close" class="close-btn">✕</span>
+      </div>
+      <div class="popup-body qa-popup">
+
+        <div class="qa-item">
+          <button class="qa-question">What programming languages and technologies do you know?</button>
+          <div class="qa-answer">
+            <p>
+              I currently work with Java and Python at beginner level, and I’m building my knowledge step by step.
+              I also use HTML and CSS at a beginner–intermediate level, mostly for small personal projects and this portfolio.
+            </p>
+          </div>
+        </div>
+
+        <div class="qa-item">
+          <button class="qa-question">Who are you as a professional?</button>
+          <div class="qa-answer">
+            <p>
+              I’m a curious, detail-oriented person who learns quickly when something new catches my interest.
+              I’m not afraid to make mistakes as long as I can understand them and fix them. I like to build structure,
+              ask questions and understand “why”, not just “what”.
+            </p>
+          </div>
+        </div>
+
+        <div class="qa-item">
+          <button class="qa-question">What is your opinion about AI?</button>
+          <div class="qa-answer">
+            <p>
+              I see AI as a powerful tool that can support people in their work – not replace them. Used in the right
+              context, it saves time and helps with ideas. Used without responsibility, it can create problems or remove
+              the human perspective. I like AI as an assistant for humans, not as a full replacement.
+            </p>
+          </div>
+        </div>
+
+        <div class="qa-item">
+          <button class="qa-question">What do you enjoy most in your work?</button>
+          <div class="qa-answer">
+            <p>
+              I enjoy learning new things and being challenged with new situations that force me to think differently.
+              Routine work is okay sometimes, but I prefer tasks where I have to analyze, connect dots and solve problems.
+            </p>
+          </div>
+        </div>
+
+        <div class="qa-item">
+          <button class="qa-question">What are your main strengths?</button>
+          <div class="qa-answer">
+            <p>
+              Curiosity and determination. I believe you can learn almost anything if you’re genuinely curious and willing
+              to put in the effort. When I don’t understand something, I tend to stay with it until it finally makes sense.
+            </p>
+          </div>
+        </div>
+
+        <div class="qa-item">
+          <button class="qa-question">How do you handle pressure?</button>
+          <div class="qa-answer">
+            <p>
+              I handle pressure well enough to deliver my work on time. A bit of pressure can even help me focus and push
+              myself to 110%. I prioritize, break tasks into steps and try not to panic.
+            </p>
+          </div>
+        </div>
+
+        <div class="qa-item">
+          <button class="qa-question">How do you work in a team?</button>
+          <div class="qa-answer">
+            <p>
+              I like to communicate and support the people I work with. I believe work becomes much more efficient when
+              people share information instead of working in silence. I appreciate teams where we can ask questions,
+              help each other and be honest about blockers.
+            </p>
+          </div>
+        </div>
+
+        <div class="qa-item">
+          <button class="qa-question">What makes you different from other candidates?</button>
+          <div class="qa-answer">
+            <p>
+              My curiosity and the way I see things. Having dyslexia and ADHD means I often notice patterns or connections
+              that others might not see immediately. When something doesn’t make sense to me, I dig into it until I can
+              really explain it, not just repeat it.
+            </p>
+          </div>
+        </div>
+
+        <div class="qa-item">
+          <button class="qa-question">How do you receive feedback and criticism?</button>
+          <div class="qa-answer">
+            <p>
+              I’m open to feedback as long as it’s given with respect and with the intention to help. I don’t expect to
+              be perfect, and I know that mistakes or confusion can happen. Good feedback is an opportunity to adjust
+              and grow, not a personal attack.
+            </p>
+          </div>
+        </div>
+
+        <div class="qa-item">
+          <button class="qa-question">How do you deal with learning new tools or technologies?</button>
+          <div class="qa-answer">
+            <p>
+              I usually learn fast enough to get the job done. If I need to use a new tool, I stay with it until I feel
+              confident enough to work independently. I ask questions, read documentation and test things myself.
+            </p>
+          </div>
+        </div>
+
+        <div class="qa-item">
+          <button class="qa-question">What can demotivate you at work?</button>
+          <div class="qa-answer">
+            <p>
+              A very toxic environment: when people split into “small groups”, stop communicating and management acts
+              with superiority instead of support. I work much better in teams where people respect each other and share
+              information openly.
+            </p>
+          </div>
+        </div>
+
+        <div class="qa-item">
+          <button class="qa-question">How would you prefer to work?</button>
+          <div class="qa-answer">
+            <p>
+              I’m flexible, but I’d prefer a hybrid setup, with some days in the office and some days remote, plus a
+              schedule that allows a bit of flexibility when needed.
+            </p>
+          </div>
+        </div>
+
+        <div class="qa-item">
+          <button class="qa-question">What do you enjoy outside of work?</button>
+          <div class="qa-answer">
+            <p>
+              I love playing games like Fortnite, Dead by Daylight and the Batman: Arkham series, spending time with my
+              two cats (Batman and Robin), and working on small creative or coding projects.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- POP-UP OTHER (hobbies & extra) -->
+    <div id="Other_popup" class="popup">
+      <div id="Other_popup_header" class="popup-header">
+        Other
+        <span id="Other_close" class="close-btn">✕</span>
+      </div>
+      <div class="popup-body qa-popup">
+
+        <div class="qa-item">
+          <button class="qa-question">What are some of your hobbies?</button>
+          <div class="qa-answer">
+            <p>
+              I enjoy gaming (Fortnite, Dead by Daylight, Batman: Arkham Asylum), journaling, listening to music,
+              and experimenting with small Arduino or coding projects.
+            </p>
+          </div>
+        </div>
+
+        <div class="qa-item">
+          <button class="qa-question">Do you like working on creative projects?</button>
+          <div class="qa-answer">
+            <p>
+              Yes – I like designing small websites, creating learning materials for students and playing with visual
+              ideas for photography or layouts.
+            </p>
+          </div>
+        </div>
+
+        <div class="qa-item">
+          <button class="qa-question">Anything else that feels &quot;you&quot;?</button>
+          <div class="qa-answer">
+            <p>
+              Spending time with my cats (Batman and Robin), exploring new tools, and learning random things just
+              because they seem interesting.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
