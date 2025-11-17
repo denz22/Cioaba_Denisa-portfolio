@@ -345,6 +345,7 @@ body.theme-blue {
     --bottom-button-bg: var(--bg-bottom);
 }
 
+/* BLUE */
 body.theme-blue #Cv_button       { background-image: url('1.Blue.Cv.png'); }
 body.theme-blue #Proiecte_button { background-image: url('2.Blue.Proiecte.png'); }
 body.theme-blue #Q_A_button      { background-image: url('3.Blue.Q&A.png'); }
@@ -352,6 +353,7 @@ body.theme-blue #Git_button      { background-image: url('4.Blue.GitHub.png'); }
 body.theme-blue #Linkedin_button { background-image: url('5.Blue.linkedin.png'); }
 body.theme-blue #Email_button    { background-image: url('6.Blue.Email.png'); }
 body.theme-blue #Other_button    { background-image: url('7.Blue.other.png'); }
+
 
 /* PINK */
 body.theme-pink {
@@ -424,3 +426,4 @@ body.theme-black #Git_button      { background-image: url('4.Black.GitHub.png');
 body.theme-black #Linkedin_button { background-image: url('5.Black.linkedin.png'); }
 body.theme-black #Email_button    { background-image: url('6.blue.Email (2).png'); }
 body.theme-black #Other_button    { background-image: url('7.Black.other.png'); }
+
