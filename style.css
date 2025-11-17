@@ -395,7 +395,7 @@ body.theme-yellow {
     --bottom-button-bg: var(--bg-bottom);
 }
 
-body.theme-yellow #Cv_button       { background-image: url('1.Yellow.Cv.png'); }
+body.theme-yellow #Cv_button       { background-image: url('1.yellow.Cv.png'); }
 body.theme-yellow #Proiecte_button { background-image: url('2.Yellow.Proiecte.png'); }
 body.theme-yellow #Q_A_button      { background-image: url('3.Yellow.Q&A.png'); }
 body.theme-yellow #Git_button      { background-image: url('4.Yellow.GitHub.png'); }
@@ -426,6 +426,7 @@ body.theme-black #Git_button      { background-image: url('4.Black.GitHub.png');
 body.theme-black #Linkedin_button { background-image: url('5.Black.linkedin.png'); }
 body.theme-black #Email_button    { background-image: url('6.blue.Email (2).png'); }
 body.theme-black #Other_button    { background-image: url('7.Black.other.png'); }
+
 
 
 
